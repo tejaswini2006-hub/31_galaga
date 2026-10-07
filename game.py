@@ -18,8 +18,16 @@ def bezier(p0, p1, p2, p3, t):
     return pygame.Vector2(x, y)
 
 def enemy_tint(kind):
+
     """Return an (r, g, b) colour override for an enemy kind, or None for the default."""
-    pass
+
+    if kind == "boss":
+        return (255, 215, 0)
+    elif kind == "red":
+        return (255, 100, 100)
+    elif kind == "blue":
+        return (100, 180, 255)
+    return None
 
 
 def on_wave_start(wave):
